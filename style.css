@@ -13,7 +13,8 @@
   --color-blue: #73aace;
   --color-yellow: #fff7d1;
   --color-orange: #feb546;
-  --color-dark-orange: #fc7f03;
+  --color-dark-orange: #ff8000;
+  --color-light-orange: #ffcc80;
   --color-black: #000000;
 
   /* Font size */
@@ -45,8 +46,16 @@ a {
   color: var(--color-white);
 }
 ul {
-  list-style: none;
   padding-left: 0;
+}
+li {
+  list-style: none;
+}
+button {
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+  outline: none;
 }
 
 /* Typography */
@@ -112,4 +121,42 @@ p {
 .navbar__menu__item:hover {
   border-radius: var(--size--border-radius);
   background-color: var(--color-dark-orange);
+}
+
+/* Home */
+#home {
+  background: url("images/home_bg.png") center/cover no-repeat;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.home__img {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  background-color: var(--color-light-orange);
+  border: 2px solid var(--color-light-white);
+}
+.home__text {
+  text-align: center;
+  font-size: var(--font-large);
+  font-weight: var(--weight-semi-bold);
+  color: var(--color-white);
+}
+.home__contact {
+  border: 2px solid var(--color-white);
+  padding: 5px;
+  margin: 25px;
+  color: var(--color-white);
+  font-size: var(--font-regular);
+  font-weight: var(--weight-bold);
+  border-radius: var(--size--border-radius);
+}
+.home__contact:hover {
+  transform: scale(1.1);
+}
+.home__contact:active {
+  background-color: rgba(255, 255, 255, 0.274);
 }
