@@ -16,6 +16,7 @@
   --color-dark-orange: #ff8000;
   --color-light-orange: #ffcc80;
   --color-black: #000000;
+  --color-lite-blue: #00c2cb;
 
   /* Font size */
   --font-large: 48px;
@@ -30,6 +31,9 @@
   --weight-regular: 400;
   /* Size */
   --size--border-radius: 4px;
+
+  /* Animation */
+  --animation-duration: 200ms;
 }
 
 /* Universal tags */
@@ -37,7 +41,7 @@
   box-sizing: border-box;
 }
 body {
-  margin: 0;
+  margin: 10px;
   font-family: "Open Sans", sans-serif;
   cursor: default;
 }
@@ -97,6 +101,7 @@ p {
   align-items: center;
   color: var(--color-white);
   padding: 16px;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.384);
 }
 
 .navbar__logo {
@@ -119,6 +124,7 @@ p {
   cursor: pointer;
 }
 .navbar__menu__item:hover {
+  transition: background-color var(--animation-duration) linear;
   border-radius: var(--size--border-radius);
   background-color: var(--color-dark-orange);
 }
@@ -155,8 +161,54 @@ p {
   border-radius: var(--size--border-radius);
 }
 .home__contact:hover {
+  transition: all var(--animation-duration) linear;
   transform: scale(1.1);
 }
 .home__contact:active {
   background-color: rgba(255, 255, 255, 0.274);
+}
+/* section */
+.section {
+  padding: 50px;
+  text-align: center;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* About */
+#about p {
+  font-size: var(--font-regular);
+  font-weight: var(--weight-semi-bold);
+  color: var(--color-dark-grey);
+}
+
+.about__majors {
+  display: flex;
+  justify-content: space-between;
+  margin: 80px 0;
+
+  margin: 50px 0;
+}
+.major__icon {
+  width: 200px;
+  height: 200px;
+  line-height: 200px;
+  font-size: 70px;
+  margin: auto;
+  border: 1px solid var(--color-orange);
+  border-radius: 50%;
+  color: var(--color-orange);
+  margin-bottom: 16px;
+}
+
+.major__title {
+  font-size: var(--font-regular);
+  font-weight: var(--weight-bold);
+  color: var(--color-dark-grey);
+  margin: 10px;
+}
+.major__icon:hover {
+  transition: all var(--animation-duration) linear;
+  color: var(--color-dark-orange);
+  transform: rotate(30deg) scale(1.1);
 }
