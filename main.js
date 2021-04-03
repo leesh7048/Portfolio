@@ -46,3 +46,20 @@ function homeScroll() {
 }
 
 document.addEventListener("scroll", homeScroll);
+// ArrowBtn visible
+document.addEventListener("scroll", arrowBtnScroll);
+function arrowBtnScroll() {
+  if (homeHeight < window.scrollY) {
+    arrowBtn.classList.add("visible");
+  } else {
+    arrowBtn.classList.remove("visible");
+  }
+}
+
+// Arrow up
+const arrowBtn = document.querySelector(".arrow-up");
+function arrowBtnClick() {
+  scroll("#home");
+}
+
+arrowBtn.addEventListener("click", arrowBtnClick);
