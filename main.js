@@ -63,3 +63,31 @@ function arrowBtnClick() {
 }
 
 arrowBtn.addEventListener("click", arrowBtnClick);
+
+// my work
+
+const workCategories = document.querySelector(".work__categories");
+const workProjects = document.querySelector(".work__projects");
+const projects = document.querySelectorAll(".project");
+
+workCategories.addEventListener("click", workCategoriesClick);
+
+function workCategoriesClick(e) {
+  const filter = e.target.dataset.filter || e.target.parentNode.dataset.filter;
+
+  if (filter == null) {
+    return;
+  }
+  workProjects.classList.add("ani-out");
+  setTimeout(() => {
+    projects.forEach((project) => {
+      if (filter === "*" || filter === project.dataset.type) {
+        project.classList.remove("invisible");
+      } else {
+        project.classList.add("invisible");
+      }
+    });
+
+    workProjects.classList.remove("ani-out");
+  }, 300);
+}
