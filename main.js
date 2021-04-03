@@ -20,8 +20,20 @@ function navbarMenuClick(e) {
   if (link == null) {
     return;
   } else {
-    const scrollTo = document.querySelector(link);
-    scrollTo.scrollIntoView({ behavior: "smooth" });
+    scroll(link);
   }
 }
 navbarMenu.addEventListener("click", navbarMenuClick);
+
+//contact btn scroll
+
+const contactBtn = document.querySelector(".home__contact");
+
+function scroll(selector) {
+  const contactTo = document.querySelector(selector);
+  contactTo.scrollIntoView({ behavior: "smooth" });
+}
+
+contactBtn.addEventListener("click", () => {
+  scroll("#contact");
+});
