@@ -155,6 +155,12 @@ p {
   justify-content: center;
   align-items: center;
 }
+.home__container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 .home__img {
   width: 250px;
   height: 250px;
