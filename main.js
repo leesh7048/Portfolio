@@ -20,10 +20,18 @@ function navbarMenuClick(e) {
   if (link == null) {
     return;
   } else {
+    navbarMenu.classList.remove("display");
     scroll(link);
   }
 }
 navbarMenu.addEventListener("click", navbarMenuClick);
+
+//navbar toggle btn
+const toggleBtn = document.querySelector(".navbar__toggle-btn");
+toggleBtn.addEventListener("click", toggleClick);
+function toggleClick() {
+  navbarMenu.classList.toggle("display");
+}
 
 //home contact btn scroll
 
